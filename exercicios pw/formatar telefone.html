@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formatar Telefone</title>
+    <style> body{font-family:Arial;} </style>
+</head>
+<body>
+
+<h3>Formatar Telefone</h3>
+
+<input type="text" id="tel" placeholder="Digite 8 números"><br><br>
+
+<button onclick="formatar()">Formatar</button>
+
+<p id="resultado"></p>
+
+<script>
+function formatarTelefone(num) {
+    let parte1 = num.slice(0, 4);
+    let parte2 = num.slice(4);
+    return parte1 + "-" + parte2;
+}
+
+function formatar() {
+    let n = document.getElementById("tel").value;
+    document.getElementById("resultado").innerText = formatarTelefone(n);
+}
+</script>
+
+</body>
+</html>

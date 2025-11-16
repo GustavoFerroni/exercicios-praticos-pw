@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Moedas</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+
+    <h3>Classificar moeda</h3>
+
+    <input type="number" id="moeda" placeholder="Valor da moeda"><br><br>
+
+    <button onclick="classificar()">Classificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function classificarMoeda(valor) {
+            if (valor === 1) {
+                return "Moeda de 1 real";
+            } else if (valor === 0.50) {
+                return "Moeda de 50 centavos";
+            } else if (valor === 0.25) {
+                return "Moeda de 25 centavos";
+            } else if (valor === 0.10) {
+                return "Moeda de 10 centavos";
+            } else if (valor === 0.05) {
+                return "Moeda de 5 centavos";
+            } else {
+                return "Moeda desconhecida";
+            }
+        }
+
+        function classificar() {
+            let v = Number(document.getElementById("moeda").value);
+            document.getElementById("resultado").innerText = classificarMoeda(v);
+        }
+    </script>
+
+</body>
+</html>

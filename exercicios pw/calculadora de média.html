@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>calculadora de média</title>
+    <style> body{font-family:Arial;} </style>
+</head>
+<body>
+
+<h3>Calcular Média</h3>
+
+<input type="number" id="n1" placeholder="Nota 1"><br>
+<input type="number" id="n2" placeholder="Nota 2"><br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularMediaSimples(a, b) {
+    let media = (a + b) / 2;
+    if (media >= 7) {
+        return "Aprovado";
+    } else {
+        return "Reprovado";
+    }
+}
+
+function calcular() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+
+    document.getElementById("resultado").innerText =
+        calcularMediaSimples(a, b);
+}
+</script>
+
+</body>
+</html>

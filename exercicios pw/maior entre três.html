@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Maior entre três</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+
+    <h3>Maior entre três números</h3>
+
+    <input type="number" id="a" placeholder="Primeiro número"><br>
+    <input type="number" id="b" placeholder="Segundo número"><br>
+    <input type="number" id="c" placeholder="Terceiro número"><br><br>
+
+    <button onclick="verMaior()">Ver maior</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function maior(a, b, c) {
+            if (a > b && a > c) {
+                return a;
+            } else if (b > a && b > c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+
+        function verMaior() {
+            let n1 = Number(document.getElementById("a").value);
+            let n2 = Number(document.getElementById("b").value);
+            let n3 = Number(document.getElementById("c").value);
+
+            document.getElementById("resultado").innerText =
+                "Maior: " + maior(n1, n2, n3);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>verificador de senha</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+
+    <h3>Verificar Senha Forte</h3>
+
+    <input id="senha" type="text" placeholder="Digite a senha">
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function senhaForte(senha) {
+            if (senha.length > 8 && senha !== "12345678") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function verificar() {
+            let s = document.getElementById("senha").value;
+            document.getElementById("resultado").innerText = senhaForte(s);
+        }
+    </script>
+
+</body>
+</html>

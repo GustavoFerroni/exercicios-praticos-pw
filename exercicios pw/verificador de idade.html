@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Idade</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+
+    <h3>Verificar se pode dirigir</h3>
+
+    <input type="number" id="idade" placeholder="Digite a idade">
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function podeDirigir(idade) {
+            if (idade >= 18) {
+                return "Pode ser habilitado(a)";
+            } else {
+                return "Ainda não pode";
+            }
+        }
+
+        function verificar() {
+            let idade = Number(document.getElementById("idade").value);
+            document.getElementById("resultado").innerText = podeDirigir(idade);
+        }
+    </script>
+
+</body>
+</html>

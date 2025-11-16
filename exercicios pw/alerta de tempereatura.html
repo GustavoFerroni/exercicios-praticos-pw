@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>alerta de temperatura</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+    <h3>Checar Temperatura</h3>
+    <input id="temp" type="number" placeholder="Digite a temperatura">
+    <button onclick="verificar()">Checar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function checarTemperatura(t) {
+            if (t < 10) {
+                return "Alerta de Frio";
+            } else if (t >= 10 && t <= 25) {
+                return "Temperatura Ideal";
+            } else {
+                return "Alerta de Calor";
+            }
+        }
+
+        function verificar() {
+            let t = Number(document.getElementById("temp").value);
+            document.getElementById("resultado").innerText = checarTemperatura(t);
+        }
+    </script>
+
+</body>
+</html>

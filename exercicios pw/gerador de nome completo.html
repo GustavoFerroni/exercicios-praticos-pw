@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>gerador de nome completo</title>
+    <style>
+        body { font-family: Arial; }
+    </style>
+</head>
+<body>
+
+    <h3>8. Gerador de Nome Completo</h3>
+
+    <input id="p" type="text" placeholder="Primeiro nome"><br>
+    <input id="s" type="text" placeholder="Sobrenome"><br><br>
+
+    <button onclick="gerar()">Gerar Nome</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function gerarNomeCompleto(p, s) {
+            return p + " " + s;
+        }
+
+        function gerar() {
+            let p = document.getElementById("p").value;
+            let s = document.getElementById("s").value;
+
+            document.getElementById("resultado").innerText = gerarNomeCompleto(p, s);
+        }
+    </script>
+
+</body>
+</html>
